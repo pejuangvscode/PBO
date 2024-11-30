@@ -2,8 +2,8 @@ from sugeng_rahayu import *
 
 def preload_data():
     Role.addRole("1", "User", "Regular user with basic privileges")
-    Role.addRole("2", "SuperAdmin", "Administrator with full access")
-    User.register("SA001", "AdminSugeng", "sugeng@gmail.com", "sugeng123", "SuperAdmin")
+    Role.addRole("2", "Admin", "Administrator with full access")
+    User.register("SA001", "AdminSugeng", "sugeng@gmail.com", "sugeng123", "Admin")
     Bus.addBus("A001", "Sugeng Rahayu Express", "Premium", 700000)
     Bus.addBus("A002", "Sugeng Rahayu Premium", "Premium", 600000)
     Bus.addBus("B003", "Sugeng Rahayu Economy", "Economy", 200000)
@@ -16,8 +16,8 @@ def main_menu():
     print("3. Exit")
 
 
-def superadmin_menu():
-    print("\n--- SuperAdmin Menu ---")
+def admin_menu():
+    print("\n--- Admin Menu ---")
     print("1. Add Bus")
     print("2. Display Buses")
     print("3. Add Operator")
@@ -57,20 +57,20 @@ def run_application():
             else:
                 print("Invalid option. Please try again.")
         else:
-            if current_user.user_role == "SuperAdmin":
-                superadmin_menu()
+            if current_user.user_role == "Admin":
+                admin_menu()
                 choice = input("Choose an option: ")
 
                 if choice == "1":
-                    SuperAdmin.addBus()
+                    Admin.addBus()
                 elif choice == "2":
                     print("\n--- Bus List ---")
-                    SuperAdmin.displayBuses()
+                    Admin.displayBuses()
                 elif choice == "3":
-                    SuperAdmin.addOperator()
+                    Admin.addOperator()
                 elif choice == "4":
                     print("\n--- Operator List ---")
-                    SuperAdmin.displayOperator()
+                    Admin.displayOperator()
                 elif choice == "5":
                     print("Logging out...")
                     current_user = None

@@ -192,7 +192,7 @@ class Customer(User):
 
 class Admin(User):
     def __init__(self, user_id, user_name, user_email, user_password):
-        super().__init__(user_id, user_name, user_email, user_password, "SuperAdmin")
+        super().__init__(user_id, user_name, user_email, user_password, "Admin")
 
     def addBus():
         bus_id = input("Enter Bus ID: ")
