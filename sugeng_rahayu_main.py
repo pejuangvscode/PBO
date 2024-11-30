@@ -8,6 +8,7 @@ def preload_data():
     Bus.addBus("A002", "Sugeng Rahayu Premium", "Premium", 600000.0)
     Bus.addBus("B003", "Sugeng Rahayu Economy", "Economy", 200000.0)
     Bus.addBus("B004", "Sugeng Rahayu Economy", "Economy", 300000.0)
+    Bus.addBus("B009", "Sugeng Rahayu New Premium", "Premium", 900000.0)
 
 def main_menu():
     print("\n=== Sugeng Rahayu Booking App ===")
