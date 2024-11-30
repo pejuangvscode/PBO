@@ -147,6 +147,13 @@ class GroupBooking(Booking):
     def applyGroupDiscount(self):
         print(f"Group discount applied: {self.discount * 100}%")
 
+class SingleBooking(Booking):
+    def __init__(self, booking_id, user_name, bus_name, booking_date, group_size, discount):
+        super().__init__(booking_id, user_name, bus_name, booking_date)
+        
+    def applyGroupDiscount(self):
+        print(f"Group discount applied: {self.discount * 100}%")
+
 class Agent(User):
     def __init__(self, user_id, user_name, user_email, user_password):
         super().__init__(user_id, user_name, user_email, user_password, "Agent")
@@ -183,7 +190,7 @@ class Customer(User):
     def displayBookings(user):
         Booking.displayBookings(user.user_name)
 
-class SuperAdmin(User):
+class Admin(User):
     def __init__(self, user_id, user_name, user_email, user_password):
         super().__init__(user_id, user_name, user_email, user_password, "SuperAdmin")
 
@@ -220,3 +227,7 @@ class SuperAdmin(User):
 
     def displayOperator():
         Operator.displayOperators()
+
+
+
+
