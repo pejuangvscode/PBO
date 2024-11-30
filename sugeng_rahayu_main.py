@@ -4,10 +4,10 @@ def preload_data():
     Role.addRole("1", "User", "Regular user with basic privileges")
     Role.addRole("2", "Admin", "Administrator with full access")
     User.register("SA001", "AdminSugeng", "sugeng@gmail.com", "sugeng123", "Admin")
-    Bus.addBus("A001", "Sugeng Rahayu Express", "Premium", 700000)
-    Bus.addBus("A002", "Sugeng Rahayu Premium", "Premium", 600000)
-    Bus.addBus("B003", "Sugeng Rahayu Economy", "Economy", 200000)
-    Bus.addBus("B004", "Sugeng Rahayu Economy", "Economy", 300000)
+    Bus.addBus("A001", "Sugeng Rahayu Express", "Premium", 700000.0)
+    Bus.addBus("A002", "Sugeng Rahayu Premium", "Premium", 600000.0)
+    Bus.addBus("B003", "Sugeng Rahayu Economy", "Economy", 200000.0)
+    Bus.addBus("B004", "Sugeng Rahayu Economy", "Economy", 300000.0)
 
 def main_menu():
     print("\n=== Sugeng Rahayu Booking App ===")

@@ -91,7 +91,7 @@ class Bus:
             print("No buses available.")
             return
         for bus in cls.buses:
-            print(f"ID: {bus.bus_id}, Name: {bus.bus_name}, Type: {bus.bus_type}, Price: {bus.bus_ticket_price}")
+            print(f"ID: {bus.bus_id}, Name: {bus.bus_name}, Type: {bus.bus_type}, Price: Rp. {bus.bus_ticket_price}")
 
 class PremiumBus(Bus):
     def __init__(self, bus_id, bus_name, bus_ticket_price, wifi_available, meal_service):
@@ -198,7 +198,7 @@ class Admin(User):
         bus_id = input("Enter Bus ID: ")
         bus_name = input("Enter Bus Name: ")
         bus_type = input("Enter Bus Type (Premium/Economy): ")
-        bus_ticket_price = float(input("Enter Ticket Price: "))
+        bus_ticket_price = float(input("Enter Ticket Price: Rp. "))
 
         if bus_type.lower() == "premium":
             wifi_available = input("Is WiFi available? (yes/no): ").lower() == "yes"
@@ -227,7 +227,3 @@ class Admin(User):
 
     def displayOperator():
         Operator.displayOperators()
-
-
-
-
